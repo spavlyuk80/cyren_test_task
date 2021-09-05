@@ -11,9 +11,18 @@ Requires additional packages: pipenv, which could be installed with `pip install
 2. Create virtual environment with `pipenv shell` and install dependencies with 
 `pipenv install`
 3. run the `python task_runner.py -p /path/to/eml_message.eml`. If you do not specify
-the path to eml.message, it will default to `./test-mail.py` or raises an error if there
+the path to eml file, it will default to `./test-mail.eml` or raises an error if there
 is no such file
 
-## Note
-I did not run tests and some solutions are not generic enough (e.g. hardcoded paths or no fallback 
+## Run
+
+`python task_runner.py -p test-mail.eml`
+
+The results are output into terminal
+
+Use `task_runner.py -h` for some help on cli args
+
+## Notes
+- I did not run tests and some solutions are not generic enough (e.g. hardcoded paths or no fallback 
 solutions for missing args)
+- I did not add eml file for security reasons, since it is a public repository
